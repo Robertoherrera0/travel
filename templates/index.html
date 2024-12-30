@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aurora Visibility Map and Probability</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <style>
+        #map {
+            width: 100%;
+            height: 500px;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px;
+        }
+        .content {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Fiore's Aurora Hunt</h1>
+    
+    <img src="{{ url_for('static', filename='probability_plot.png') }}" alt="Aurora Visibility Probability Plot">
+    
+    <iframe src="{{ url_for('static', filename='aurora_map.html') }}" width="100%" height="500px"></iframe>
+
+    <div class="content">
+        <h4>Mira los lugares donde se pueden ver las auroras y que tan probable es que se vean ahorita. Esto es con data real y el plot de arriba te dice cuando fue tomada, practicamente cada vez que refresehees la pagina. Esto trabajando en coger mas data para poder predecir cuando y donde va a ser mas probable que se vean para poder armar un viaje. Te amo. Posdata: Lo voy a hacer mucho mas bonito y useful, solo ya queria dartelo. Te amo mucho y te extrano mucho. </h4>
+    </div>
+
+</div>
+
+</body>
+</html>
